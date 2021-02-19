@@ -1,0 +1,38 @@
+.page-top.animated.fadeInDown
+  .nav
+    li
+      if is_home()
+        a.current(href="/")= __('资源')					
+      else
+        a(href="/")= __('资源')	
+
+    li
+      if is_archive()
+        a.current(href="/archives")= __('归档')
+      else
+        a(href="/archives")= __('归档')
+    li
+      if is_page()
+        a.current(href="/about")= __('关于')
+      else
+        a(href="/about")= __('关于')      
+
+       
+
+    
+
+       
+    
+    
+    
+    
+    
+    	
+  .information
+    .back_btn
+      li
+        if is_post()
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)") 
+        else
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)",style="display:none;") 
+    
